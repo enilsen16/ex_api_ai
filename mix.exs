@@ -3,10 +3,12 @@ defmodule ApiAi.Mixfile do
 
   def project do
     [app: :ex_api_ai,
-     version: "0.1.0",
+     version: "0.1.0-beta.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: "Elixir wrapper for @api_ai",
+     package: package(),
      deps: deps()]
   end
 
@@ -31,6 +33,16 @@ defmodule ApiAi.Mixfile do
     [
       {:httpoison, "~> 0.9.0"},
       {:poison, "~> 2.0"}
+    ]
+  end
+
+  defp package do
+    [
+      maintainers: ["Erik Nilsen"],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/enilsen16/ex_api_ai",
+      }
     ]
   end
 end
