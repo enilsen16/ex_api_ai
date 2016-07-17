@@ -20,7 +20,9 @@ use Mix.Config
 #
 #     config :logger, level: :info
 #
-
+config :ex_api_ai,
+  client_key: "3485a96fb27744db83e78b8c4bc9e7b7",
+  default_version: "20160707"
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.
