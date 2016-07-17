@@ -1,4 +1,9 @@
-# ApiAi [![Build Status](https://travis-ci.org/enilsen16/ex_api.ai.svg?branch=master)](https://travis-ci.org/enilsen16/ex_api.ai)
+# ExApi.Ai [![Build Status](https://travis-ci.org/enilsen16/ex_api.ai.svg?branch=master)](https://travis-ci.org/enilsen16/ex_api.ai)
+
+### Work in progress
+
+
+Built off of the [official ruby sdk](https://github.com/api-ai/api-ai-ruby), ExApi.ai is a elixir wrapper from api.ai.
 
 ## Installation
 
