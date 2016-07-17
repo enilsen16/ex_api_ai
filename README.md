@@ -1,6 +1,4 @@
-# ApiAi
-
-**TODO: Add description**
+# ApiAi [![Build Status](https://travis-ci.org/enilsen16/ex_api.ai.svg?branch=master)](https://travis-ci.org/enilsen16/ex_api.ai)
 
 ## Installation
 
@@ -24,4 +22,3 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 If [published on HexDocs](https://hex.pm/docs/tasks#hex_docs), the docs can
 be found at [https://hexdocs.pm/ex_api_ai](https://hexdocs.pm/ex_api_ai)
-
