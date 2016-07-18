@@ -10,10 +10,10 @@ defmodule ApiAi.TextRequest do
       %{"query" => text, "lang" => "en"}
       |> merge_with_body(options)
       |> Poison.encode!
-      
+
     headers = [{"Authorization", "Bearer#{@token}"}, {"Content-Type", "application/json; charset=utf-8"}]
 
-    %HTTPoison.Response{body: body, headers: _headers} = HTTPoison.post!(url, body, headers)
+    {body, _headers} = Client.preform!(:post, url, body, headers)
 
     body |> Poison.Parser.parse!
   end
