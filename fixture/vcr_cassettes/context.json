@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "{\"resetContexts\":true,\"query\":\"Hello\",\"lang\":\"en\"}",
+      "headers": {
+        "Authorization": "Bearer3485a96fb27744db83e78b8c4bc9e7b7",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.api.ai/v1/query?v=20160707"
+    },
+    "response": {
+      "body": "{\n  \"id\": \"5b979141-3aa3-42c2-8a29-fa5b137b7a84\",\n  \"timestamp\": \"2016-07-18T20:41:05.241Z\",\n  \"result\": {\n    \"source\": \"agent\",\n    \"resolvedQuery\": \"Hello\",\n    \"action\": \"greeting\",\n    \"actionIncomplete\": false,\n    \"parameters\": {},\n    \"contexts\": [],\n    \"metadata\": {\n      \"intentId\": \"a5d685ab-1f19-46b0-9478-69f794553668\",\n      \"webhookUsed\": \"false\",\n      \"intentName\": \"hello\"\n    },\n    \"fulfillment\": {\n      \"speech\": \"Hi! How are you?\"\n    },\n    \"score\": 1.0\n  },\n  \"status\": {\n    \"code\": 200,\n    \"errorType\": \"success\"\n  },\n  \"sessionId\": \"00000000-0000-0000-0000-000000000000\"\n}",
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Cache-control": "no-cache=\"set-cookie\"",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Mon, 18 Jul 2016 20:41:05 GMT",
+        "Server": "nginx/1.8.0",
+        "Set-Cookie": "AWSELB=5BC95B811CF70EAD3EDFA254D9A7311CD26C8652F5A580CC9A0B05B972D5BA12EB6858F5E096BF9D616ACD6A6E0BFE8D9F018621D2A8D8905B1E84B9D4CB11EF72EC474294;PATH=/",
+        "Content-Length": "603",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

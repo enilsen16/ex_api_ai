@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "{\"resetContexts\":true,\"query\":\"Hello\",\"lang\":\"en\",\"contexts\":[\"secondContext\"]}",
+      "headers": {
+        "Authorization": "Bearer3485a96fb27744db83e78b8c4bc9e7b7",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.api.ai/v1/query?v=20160707"
+    },
+    "response": {
+      "body": "{\n  \"id\": \"c0c0979a-d428-4083-b2c9-258531333a02\",\n  \"timestamp\": \"2016-07-18T20:41:05.52Z\",\n  \"result\": {\n    \"source\": \"agent\",\n    \"resolvedQuery\": \"Hello\",\n    \"action\": \"secondGreeting\",\n    \"actionIncomplete\": false,\n    \"parameters\": {},\n    \"contexts\": [\n      {\n        \"name\": \"secondcontext\",\n        \"lifespan\": 4\n      }\n    ],\n    \"metadata\": {\n      \"intentId\": \"f68ead5b-41bd-4064-9e3c-7334543fbcea\",\n      \"webhookUsed\": \"false\",\n      \"intentName\": \"hello3\"\n    },\n    \"fulfillment\": {\n      \"speech\": \"\"\n    },\n    \"score\": 0.7512499895834375\n  },\n  \"status\": {\n    \"code\": 200,\n    \"errorType\": \"success\"\n  },\n  \"sessionId\": \"00000000-0000-0000-0000-000000000000\"\n}",
+      "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Cache-control": "no-cache=\"set-cookie\"",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Date": "Mon, 18 Jul 2016 20:41:05 GMT",
+        "Server": "nginx/1.9.7",
+        "Set-Cookie": "AWSELB=5BC95B811CF70EAD3EDFA254D9A7311CD26C8652F5CCB93401E1FF1C05C2DDF55F967ED3612EA0204E204EAA686C35A3B71CA958E0E204B5224012705C37B0C3B395227C2B;PATH=/",
+        "Content-Length": "684",
+        "Connection": "keep-alive"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

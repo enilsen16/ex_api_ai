@@ -32,7 +32,8 @@ defmodule ApiAi.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.9.0"},
-      {:poison, "~> 2.0"}
+      {:poison, "~> 2.0"},
+      {:exvcr, "~> 0.7", only: :test}
     ]
   end
 
