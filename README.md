@@ -1,4 +1,4 @@
-# ExApiAi [![Build Status](https://travis-ci.org/enilsen16/ex_api.ai.svg?branch=master)](https://travis-ci.org/enilsen16/ex_api.ai)
+# ExApiAi [![Build Status](https://travis-ci.org/enilsen16/ex_api_ai.svg?branch=master)](https://travis-ci.org/enilsen16/ex_api_ai)
 
 ### Work in progress
 
