@@ -1,20 +1,10 @@
 defmodule ApiAi do
-  use Application
+  alias ApiAi.{TextRequest, Client}
 
-  # See http://elixir-lang.org/docs/stable/elixir/Application.html
-  # for more information on OTP Applications
-  def start(_type, _args) do
-    import Supervisor.Spec, warn: false
-
-    # Define workers and child supervisors to be supervised
-    children = [
-      # Starts a worker by calling: ApiAi.Worker.start_link(arg1, arg2, arg3)
-      # worker(ApiAi.Worker, [arg1, arg2, arg3]),
-    ]
-
-    # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
-    # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: ApiAi.Supervisor]
-    Supervisor.start_link(children, opts)
+  @doc """
+    Send Text Request query to Api.ai
+  """
+  def text_request(text, options \\ %{}) do
+    TextRequest.text_request(text, options)
   end
 end

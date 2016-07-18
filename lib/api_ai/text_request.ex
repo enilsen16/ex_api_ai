@@ -1,5 +1,5 @@
 defmodule ApiAi.TextRequest do
-  alias ApiAi.Client, as: Client
+  alias ApiAi.Client
 
   @version Application.get_env(:ex_api_ai, :default_version, "20160707" )
   @token Application.get_env(:ex_api_ai, :client_key)
