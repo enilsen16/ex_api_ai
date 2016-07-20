@@ -12,14 +12,14 @@
       "url": "https://api.api.ai/v1/query?v=20160707"
     },
     "response": {
-      "body": "{\n  \"id\": \"6a3be735-e31c-4ffd-9c25-b6946649ba98\",\n  \"timestamp\": \"2016-07-18T20:41:05.684Z\",\n  \"result\": {\n    \"source\": \"agent\",\n    \"resolvedQuery\": \"Hello\",\n    \"action\": \"greeting\",\n    \"actionIncomplete\": false,\n    \"parameters\": {},\n    \"contexts\": [],\n    \"metadata\": {\n      \"intentId\": \"a5d685ab-1f19-46b0-9478-69f794553668\",\n      \"webhookUsed\": \"false\",\n      \"intentName\": \"hello\"\n    },\n    \"fulfillment\": {\n      \"speech\": \"Hi! How are you?\"\n    },\n    \"score\": 1.0\n  },\n  \"status\": {\n    \"code\": 200,\n    \"errorType\": \"success\"\n  },\n  \"sessionId\": \"00000000-0000-0000-0000-000000000000\"\n}",
+      "body": "{\n  \"id\": \"d498ae8d-8d83-47f6-93fb-439f9f4cba93\",\n  \"timestamp\": \"2016-07-20T01:15:35.075Z\",\n  \"result\": {\n    \"source\": \"agent\",\n    \"resolvedQuery\": \"Hello\",\n    \"action\": \"greeting\",\n    \"actionIncomplete\": false,\n    \"parameters\": {},\n    \"contexts\": [],\n    \"metadata\": {\n      \"intentId\": \"a5d685ab-1f19-46b0-9478-69f794553668\",\n      \"webhookUsed\": \"false\",\n      \"intentName\": \"hello\"\n    },\n    \"fulfillment\": {\n      \"speech\": \"Hi! How are you?\"\n    },\n    \"score\": 1.0\n  },\n  \"status\": {\n    \"code\": 200,\n    \"errorType\": \"success\"\n  },\n  \"sessionId\": \"00000000-0000-0000-0000-000000000000\"\n}",
       "headers": {
         "Access-Control-Allow-Credentials": "true",
         "Cache-control": "no-cache=\"set-cookie\"",
         "Content-Type": "application/json;charset=UTF-8",
-        "Date": "Mon, 18 Jul 2016 20:41:05 GMT",
+        "Date": "Wed, 20 Jul 2016 01:15:35 GMT",
         "Server": "nginx/1.8.0",
-        "Set-Cookie": "AWSELB=5BC95B811CF70EAD3EDFA254D9A7311CD26C8652F5A580CC9A0B05B972D5BA12EB6858F5E096BF9D616ACD6A6E0BFE8D9F018621D2A8D8905B1E84B9D4CB11EF72EC474294;PATH=/",
+        "Set-Cookie": "AWSELB=5BC95B811CF70EAD3EDFA254D9A7311CD26C8652F5CCB93401E1FF1C05C2DDF55F967ED3613B6D34EB39FF6495AD1B8CCE59B6727B6CE0B98F3BE8AF04A063FCFC3895A3D4;PATH=/",
         "Content-Length": "603",
         "Connection": "keep-alive"
       },
