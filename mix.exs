@@ -30,7 +30,7 @@ defmodule ApiAi.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.9.0"},
+      {:httpoison, "~> 0.11.0"},
       {:poison, "~> 2.0"},
       {:exvcr, "~> 0.7", only: :test}
     ]
