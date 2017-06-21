@@ -13,9 +13,12 @@ defmodule ApiAi.TextRequest do
 
     headers = [{"Authorization", "Bearer#{@token}"}, {"Content-Type", "application/json; charset=utf-8"}]
 
-    {body, _headers} = Client.preform!(:post, url, body, headers)
-
-    body |> Poison.Parser.parse!
+    case Client.preform(:post, url, body, headers) do
+      {:ok, %HTTPoison.Response{} = response} ->
+        response.body |> Poison.Parser.parse!
+      {:error, response} ->
+        response
+    end
   end
 
   defp merge_with_body(body, map) do
