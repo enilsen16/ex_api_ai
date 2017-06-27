@@ -1,17 +1,16 @@
 defmodule ApiAi.TextRequest do
   alias ApiAi.Client
 
-  @version Application.get_env(:ex_api_ai, :default_version, "20160707" )
-  @token Application.get_env(:ex_api_ai, :client_key)
-
-  def text_request(text, options \\ %{}) do
-    url = Client.base_url <> "query?v=" <> @version
+  def text_request(text, options \\ %{}) when is_binary(text), do: Client.new() |> text_request(text, options)
+  def text_request(%Client{} = client, text) when is_binary(text), do: text_request(client, text, %{})
+  def text_request(%Client{} = client, text, %{} = options) do
+    url = client.base_url <> "query?v=" <> client.version
     body =
       %{"query" => text, "lang" => "en"}
       |> merge_with_body(options)
       |> Poison.encode!
 
-    headers = [{"Authorization", "Bearer#{@token}"}, {"Content-Type", "application/json; charset=utf-8"}]
+    headers = [{"Authorization", "Bearer #{client.client_access_token}"}, {"Content-Type", "application/json; charset=utf-8"}]
 
     case Client.perform(:post, url, body, headers) do
       {:ok, %HTTPoison.Response{} = response} ->
