@@ -3,7 +3,7 @@ defmodule ApiAi.Client do
 
   def base_url, do: @base_url
 
-  def preform(method, url, body \\ "", headers \\ [], options \\ []) do
+  def perform(method, url, body \\ "", headers \\ [], options \\ []) do
       HTTPoison.request(method, url, body, headers, options)
   end
 end
