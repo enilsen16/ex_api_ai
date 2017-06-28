@@ -1,15 +1,17 @@
 defmodule ApiAi.Client do
-  defstruct [:client_access_token, :version, :base_url]
-  @enforce_keys [:client_access_token, :version, :base_url]
+  defstruct [:client_access_token, :developer_access_token, :version, :base_url]
+  @enforce_keys [:version, :base_url]
 
   @base_url "https://api.api.ai/v1"
   @version "20160707"
 
   def new(%{} = params \\ %{}) do
-    token = Application.get_env(:ex_api_ai, :client_access_token)
+    client_token = Application.get_env(:ex_api_ai, :client_access_token)
+    developer_token = Application.get_env(:ex_api_ai, :developer_access_token)
 
     %__MODULE__{
-      client_access_token: token,
+      client_access_token: client_token,
+      developer_access_token: developer_token,
       version: @version,
       base_url: @base_url
     } |> Map.merge(params)
@@ -26,10 +28,13 @@ defmodule ApiAi.Client do
     |> URI.to_string
 
     headers = [
-      {"Authorization", "Bearer #{client.client_access_token}"},
+      {"Authorization", "Bearer #{access_token(client, path)}"},
       {"Content-Type", "application/json; charset=utf-8"}
     ] ++ headers
 
     HTTPoison.request(method, uri, body, headers, options)
   end
+
+  defp access_token(%__MODULE__{} = client, "/query"), do: client.client_access_token
+  defp access_token(%__MODULE__{} = client, _path), do: client.developer_access_token
 end
