@@ -32,7 +32,7 @@ defmodule EntityTest do
         }
       ]
 
-      response = Entity.update_entries(client, entity, entries)
+      {:ok, response} = Entity.update_entries(client, entity, entries)
 
       assert response["status"]["code"] == 200
     end

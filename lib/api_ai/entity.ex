@@ -9,11 +9,6 @@ defmodule ApiAi.Entity do
     # Should be a list of %{"value" => "foo", "synonyms" => ["bar", "baz"]} maps
     body = entries |> Poison.encode!
 
-    case Client.perform(client, :put, query, body, []) do
-      {:ok, %HTTPoison.Response{} = response} ->
-        response.body |> Poison.Parser.parse!
-      {:error, response} ->
-        response
-    end
+    Client.perform(client, :put, query, body, [])
   end
 end

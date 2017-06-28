@@ -9,12 +9,7 @@ defmodule ApiAi.TextRequest do
       |> merge_with_body(options)
       |> Poison.encode!
 
-    case Client.perform(client, :post, "/query", body, []) do
-      {:ok, %HTTPoison.Response{} = response} ->
-        response.body |> Poison.Parser.parse!
-      {:error, response} ->
-        response
-    end
+    Client.perform(client, :post, "/query", body, [])
   end
 
   defp merge_with_body(body, map) do

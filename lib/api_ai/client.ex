@@ -33,8 +33,12 @@ defmodule ApiAi.Client do
     ] ++ headers
 
     HTTPoison.request(method, uri, body, headers, options)
+    |> handle_apiai_response
   end
 
   defp access_token(%__MODULE__{} = client, "/query"), do: client.client_access_token
   defp access_token(%__MODULE__{} = client, _path), do: client.developer_access_token
+
+  defp handle_apiai_response({:ok, response}), do: {:ok, response.body |> Poison.Parser.parse! }
+  defp handle_apiai_response({:error, response}), do: {:error, response}
 end
