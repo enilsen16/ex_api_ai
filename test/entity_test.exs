@@ -25,6 +25,31 @@ defmodule EntityTest do
     end
   end
 
+  test "should create the entries on an entity", %{client: client, entity: entity} do
+    use_cassette "create_entity_entries" do
+      entries = [
+        %{
+          "value" => "tree",
+          "synonyms" => [
+            "maple",
+            "oak"
+          ]
+        },
+        %{
+          "value" => "john",
+          "synonyms" => [
+            "johnny",
+            "jack"
+          ]
+        }
+      ]
+
+      {:ok, response} = Entity.create_entries(client, entity, entries)
+
+      assert response["status"]["code"] == 200
+    end
+  end
+
   test "should update the entries on an entity", %{client: client, entity: entity} do
     use_cassette "update_entity_entries" do
       entries = [
