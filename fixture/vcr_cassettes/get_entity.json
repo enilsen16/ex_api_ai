@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "***",
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://api.api.ai/v1/entities/e205429c-8010-40eb-a6d4-1644a9b805cd?v=20160707"
+    },
+    "response": {
+      "body": "{\n  \"id\": \"e205429c-8010-40eb-a6d4-1644a9b805cd\",\n  \"name\": \"dimension_value\",\n  \"isOverridable\": true,\n  \"entries\": [\n    {\n      \"value\": \"Brand\",\n      \"synonyms\": [\n        \"Brand\"\n      ]\n    },\n    {\n      \"value\": \"Analytics\",\n      \"synonyms\": [\n        \"Analytics\"\n      ]\n    },\n    {\n      \"value\": \"google\",\n      \"synonyms\": [\n        \"google\"\n      ]\n    },\n    {\n      \"value\": \"non brand\",\n      \"synonyms\": [\n        \"non brand\"\n      ]\n    },\n    {\n      \"value\": \"GA\",\n      \"synonyms\": [\n        \"GA\",\n        \"georgia\"\n      ]\n    },\n    {\n      \"value\": \"OH\",\n      \"synonyms\": [\n        \"OH\",\n        \"ohio\"\n      ]\n    },\n    {\n      \"value\": \"Operations\",\n      \"synonyms\": [\n        \"Operations\"\n      ]\n    },\n    {\n      \"value\": \"automobile\",\n      \"synonyms\": [\n        \"car\",\n        \"motorcycle\"\n      ]\n    },\n    {\n      \"value\": \"gas\",\n      \"synonyms\": [\n        \"nitrogen\",\n        \"oxygen\"\n      ]\n    }\n  ],\n  \"isEnum\": false,\n  \"automatedExpansion\": false\n}",
+      "headers": {
+        "Server": "nginx/1.11.9",
+        "Date": "Wed, 28 Jun 2017 20:11:05 GMT",
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "997",
+        "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Credentials": "true",
+        "Via": "1.1 google",
+        "Alt-Svc": "clear"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
