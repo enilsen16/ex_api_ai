@@ -32,8 +32,8 @@ defmodule ApiAi.Mixfile do
     [
       {:ex_doc, ">= 0.0.0", only: :dev},
       {:exvcr, "~> 0.8", only: :test},
-      {:httpoison, "~> 0.12.0"},
-      {:poison, "~> 3.0"}
+      {:httpoison, "~> 0.12"},
+      {:poison, "~> 3.1"}
     ]
   end
 
